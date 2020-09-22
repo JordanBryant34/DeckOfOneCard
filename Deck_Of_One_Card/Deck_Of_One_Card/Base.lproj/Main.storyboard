@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Draw Card View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="DrawCardViewController" customModule="Deck_Of_One_Card" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dKL-8H-YmQ">
+                                <rect key="frame" x="72.5" y="259.5" width="269" height="377"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="dKL-8H-YmQ" secondAttribute="height" multiplier="1:1.4" id="Yqr-B5-OL9"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Draw a card..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gfp-Fq-lW9">
+                                <rect key="frame" x="62" y="189.5" width="290" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FcZ-yL-WzU">
+                                <rect key="frame" x="132" y="752" width="150" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="6ex-js-AvV"/>
+                                    <constraint firstAttribute="height" constant="60" id="T5k-9b-4yu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Draw"/>
+                                <connections>
+                                    <action selector="drawButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lez-Ka-wvy"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="FcZ-yL-WzU" secondAttribute="bottom" constant="50" id="0BK-JW-TOX"/>
+                            <constraint firstItem="dKL-8H-YmQ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="P1t-Mj-QMp"/>
+                            <constraint firstItem="Gfp-Fq-lW9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qgs-Hd-2Vc"/>
+                            <constraint firstItem="dKL-8H-YmQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gFF-10-0fx"/>
+                            <constraint firstItem="Gfp-Fq-lW9" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.7" id="gjQ-ae-8Um"/>
+                            <constraint firstItem="FcZ-yL-WzU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nTc-RH-qY7"/>
+                            <constraint firstItem="dKL-8H-YmQ" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.65" id="sSy-T7-nEv"/>
+                            <constraint firstItem="dKL-8H-YmQ" firstAttribute="top" secondItem="Gfp-Fq-lW9" secondAttribute="bottom" constant="40" id="xDK-8H-MQl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="cardImageView" destination="dKL-8H-YmQ" id="jPv-U6-2Ne"/>
+                        <outlet property="cardLabel" destination="Gfp-Fq-lW9" id="Bqh-08-z2c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="-1.3392857142857142"/>
+        </scene>
+    </scenes>
+</document>
